@@ -537,9 +537,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.2);
-
   width: 528px;
   height: 581px;
+  padding: 40px;
   background-color: var(--third-theme-color);
   transition: transform var(--transition-dur) var(--transition-func),
     opacity var(--transition-dur) var(--transition-func),
@@ -574,6 +574,103 @@ body {
 
 .modal-close-button-icon {
   transition: fill var(--transition-dur) var(--transition-func);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 2.3;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-bottom: 12px;
+}
+
+.modal-form-field {
+  margin-bottom: 10px;
+}
+
+.modal-form-input-wrapper {
+  position: relative;
+}
+
+.modal-form-input-desc {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17x;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: var(--black-theme-color);
+  transition: border-color var(--transition-dur) var(--transition-func);
+}
+
+.modal-form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.modal-form-input-icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill var(--transition-dur) var(--transition-func);
+}
+
+.modal-form-input:focus + .modal-form-input-icon {
+  fill: var(--accent-color);
+}
+
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  color: var(--black-theme-color);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  transition: border-color var(--transition-dur) var(--transition-func);
+}
+
+.modal-form-message::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-message:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.modal-fake-check {
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--primary-text-color);
+  background-color: #2f303a;
+}
+
+.modal-fake-check:focus {
+  background-color: var(--accent-color);
 }
 
 /* PORTFOLIO */

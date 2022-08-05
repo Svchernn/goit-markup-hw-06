@@ -62,7 +62,9 @@
       <section class="hero overlay">
         <div class="container">
           <h1 class="hero-name">Ефективні рішення для вашого бізнесу</h1>
-          <button class="modal-button button" type="button" data-modal-open>Замовити послугу</button>
+          <button class="modal-button button" type="button" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
       <!-- ADVANTAGES -->
@@ -124,38 +126,38 @@
           <ul class="about-list list">
             <li class="about-list-item">
               <div class="about-list-wrapper">
-              <img
-                class="about-img"
-                src="./images/common/box1.jpg"
-                alt="робота над проєктом"
-                width="370"
-                height="294"
-              />
-              <p class="about-overlay">Десктопні додатки</p>
+                <img
+                  class="about-img"
+                  src="./images/common/box1.jpg"
+                  alt="робота над проєктом"
+                  width="370"
+                  height="294"
+                />
+                <p class="about-overlay">Десктопні додатки</p>
               </div>
             </li>
             <li class="about-list-item">
               <div class="about-list-wrapper">
-              <img
-                class="about-img"
-                src="./images/common/box2.jpg"
-                alt="робота над адаптацією"
-                width="370"
-                height="294"
-              />
-              <p class="about-overlay">Мобільні додатки</p>
+                <img
+                  class="about-img"
+                  src="./images/common/box2.jpg"
+                  alt="робота над адаптацією"
+                  width="370"
+                  height="294"
+                />
+                <p class="about-overlay">Мобільні додатки</p>
               </div>
             </li>
             <li class="about-list-item">
               <div class="about-list-wrapper">
-              <img
-                class="about-img"
-                src="./images/common/box3.jpg"
-                alt="робота над дизайном"
-                width="370"
-                height="294"
-              />
-              <p class="about-overlay">Дизайнерські рішення</p>
+                <img
+                  class="about-img"
+                  src="./images/common/box3.jpg"
+                  alt="робота над дизайном"
+                  width="370"
+                  height="294"
+                />
+                <p class="about-overlay">Дизайнерські рішення</p>
               </div>
             </li>
           </ul>
@@ -458,14 +460,79 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-button" data-modal-close>
           <svg class="modal-close-button-icon" width="18px" height="18px">
             <use href="./images/sprite.svg#icon-close-modal"></use>
           </svg>
-
         </button>
+        <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="modal-form">
+          <label class="modal-form-field">
+            <span class="modal-form-input-desc"> Ім'я </span>
+            <span class="modal-form-input-wrapper">
+            <input
+              type="text"
+              name="user_name"
+              class="modal-form-input"
+              required
+              pattern="^[a-zA-Zа-яА-ЯіІїЇ]+$"
+              minlength="2"
+            />
+            <svg class="modal-form-input-icon" width="18px" height="18px">
+                <use href="./images/sprite.svg#icon-person"></use>
+              </svg>
+              </span>
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-input-desc"> Телефон </span>
+            <span class="modal-form-input-wrapper">
+            <input
+              type="tel"
+              name="user_phone"
+              class="modal-form-input"
+              required
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              title="xxx-xxx-xx-xx"
+            />
+            <svg class="modal-form-input-icon" width="18px" height="18px">
+              <use href="./images/sprite.svg#icon-phone-bl"></use>
+            </svg>
+            </span>
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-input-desc"> Пошта </span>
+            <span class="modal-form-input-wrapper">
+            <input type="email" name="user_email" class="modal-form-input" required />
+            <svg class="modal-form-input-icon" width="18px" height="18px">
+              <use href="./images/sprite.svg#icon-email-bl"></use>
+            </svg>
+            </span>
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-input-desc"> Коментар </span>
+            <textarea
+              name="user_message"
+              class="modal-form-message"
+              placeholder="Введіть текст"
+              ></textarea>
+          </label>
+          <input 
+          id="user-privacy" 
+          type="checkbox" 
+          name="user_privacy"
+          class="modal-form-check"
+          />
+          <label for="user-privacy" class="modal-form-check-desc">
+            <span class="modal-fake-check">
+              <svg class="modal-form-check-icon" width="15px" height="15px">
+                <use href="./images/sprite.svg#icon-check"></use>
+              </svg>
+            </span>
+            Погоджуюся з розсилкою та приймаю <a href=""> Умови договору </a></label>
+        <button type="submit" class="modal-form-submit">Відправити</button>
+        </form>
       </div>
     </div>
     <script src="js/modal.js"></script>

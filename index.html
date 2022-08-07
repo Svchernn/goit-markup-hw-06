@@ -458,6 +458,23 @@
             </li>
           </ul>
         </div>
+        <div class="join-form-wrapper">
+          <h3 class="join-subtitle">Підпишіться на розсилку</h3>
+          <form class="join-form">
+            <label class="join-form-field">
+              <input type="email" 
+              name="user_email" 
+              class="join-form-input" 
+              placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="join-form-submit-btn button">Підписатися
+              <svg class="join-submit-icon" width="24px" height="24px">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -504,7 +521,10 @@
           <label class="modal-form-field">
             <span class="modal-form-input-desc"> Пошта </span>
             <span class="modal-form-input-wrapper">
-            <input type="email" name="user_email" class="modal-form-input" required />
+            <input type="email" 
+            name="user_email" 
+            class="modal-form-input" 
+            required />
             <svg class="modal-form-input-icon" width="18px" height="18px">
               <use href="./images/sprite.svg#icon-email-bl"></use>
             </svg>
@@ -531,7 +551,7 @@
               </svg>
             </span>
             Погоджуюся з розсилкою та приймаю&nbsp;<a href=""> Умови договору </a></label>
-        <button type="submit" class="modal-form-submit">Відправити</button>
+        <button type="submit" class="form-submit-btn button">Відправити</button>
         </form>
       </div>
     </div>

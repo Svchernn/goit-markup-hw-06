@@ -584,17 +584,20 @@ body {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1.2);
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(1);
   width: 528px;
   height: 581px;
-  padding: 40px;
+  padding-left: 40px;
+  padding-top: 44px;
+  padding-right: 40px;
+  padding-bottom: 36px;
   background-color: var(--third-theme-color);
   transition: transform var(--transition-dur) var(--transition-func),
     opacity var(--transition-dur) var(--transition-func),
@@ -614,17 +617,12 @@ body {
   height: 30px;
   border-radius: 50%;
   padding: 0;
-  transition: background-color var(--transition-dur) var(--transition-func);
-}
-
-.modal-close-button:hover,
-.modal-close-button:focus {
-  background-color: var(--accent-color);
+  cursor: pointer;
 }
 
 .modal-close-button:hover .modal-close-button-icon,
 .modal-close-button:focus .modal-close-button-icon {
-  fill: var(--third-theme-color);
+  fill: var(--accent-color);
 }
 
 .modal-close-button-icon {
@@ -639,7 +637,7 @@ body {
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 2.3;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
@@ -693,7 +691,12 @@ body {
   fill: var(--accent-color);
 }
 
+.modal-form-field-message {
+  margin-bottom: 20px;
+}
+
 .modal-form-message {
+  display: block;
   width: 100%;
   height: 120px;
   padding: 12px 16px;
@@ -719,6 +722,7 @@ body {
 
 .modal-form-check-desc {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 30px;
   font-weight: 400;
@@ -747,6 +751,10 @@ body {
   margin-right: 7px;
   transition: border-color var(--transition-dur) var(--transition-func),
     border-radius var(--transition-dur) var(--transition-func);
+}
+
+.link-privacy {
+  color: var(--accent-color);
 }
 
 /* .modal-fake-check:focus {
